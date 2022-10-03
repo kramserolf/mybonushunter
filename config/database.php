@@ -45,7 +45,7 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'url' => env('DATABASE_URL'),
+            'url' => env('mysql://doadmin:AVNS_y6yGAHHRiDIvJuR9bYL@db-mysql-nyc1-74837-do-user-12270083-0.b.db.ondigitalocean.com:25060/defaultdb?ssl-mode=REQUIRED'),
             'host' => env('DB_HOST', 'db-mysql-nyc1-74837-do-user-12270083-0.b.db.ondigitalocean.com'),
             'port' => env('DB_PORT', '25060'),
             'database' => env('DB_DATABASE', 'defaultdb'),
