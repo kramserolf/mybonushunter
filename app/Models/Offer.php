@@ -10,6 +10,7 @@ use Auth;
 
 class Offer extends Model
 {
+
     use HasFactory;
     protected $fillable = [ 
         'banner_image', 
@@ -22,11 +23,9 @@ class Offer extends Model
         'credit',
     ];
 
-    public function scopegetOffer()
+    public function scopegetOffer($query)
     {
-        $all_offers = Offer::paginate(6);
-
-        return $all_offers;
+       return Offer::paginate(8);
     }
 
     
