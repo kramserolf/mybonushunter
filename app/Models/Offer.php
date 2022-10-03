@@ -10,12 +10,6 @@ use Auth;
 
 class Offer extends Model
 {
-    protected $_offer;
-
-    public function __construct(Database $_offer)
-    {
-        $this->_offer = $db_offer;
-    }
     use HasFactory;
     protected $fillable = [ 
         'banner_image', 
