@@ -41,7 +41,7 @@ class WebsiteController extends Controller
     public function index()
     {
         // show latest offer
-        $offers = Offer::getOffer();
+        $offers = Offer::all();
 
         // get all banners
         $banners = Banner::getBanner();
