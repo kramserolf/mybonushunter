@@ -30,7 +30,7 @@ class WebsiteController extends Controller
     public function user_login()
     {   
         $banners = Banner::getBanner();
-        $offers = Offer::getOffer();
+        $offers = Offer::all();
         // get current offers
         $remaining_offers = ClaimedOffer::unclaimedOffer();
 
