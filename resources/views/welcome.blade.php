@@ -64,7 +64,7 @@
         <div>
             <header>
                 <nav class="navbar navbar-expand-lg navbar-custom navbar-dark">
-                    <div class="container"><a class="navbar-brand" href="/"><img src="/images/LOGO.png"
+                    <div class="container"><a class="navbar-brand" href="/"><img src="{{asset('images/logo.png')}}"
                                 alt="My Bonus Hunter" style="height: 40px;"></a><button class="navbar-toggler"
                             type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                             aria-controls="navbarSupportedContent" aria-expanded="false"
