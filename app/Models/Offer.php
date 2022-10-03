@@ -24,9 +24,8 @@ class Offer extends Model
 
     public function scopegetOffer()
     {
-        $all_offers = Offer::latest()->paginate(6);
+        $all_offers = Offer::paginate(6);
 
-    
         return $all_offers;
     }
 
