@@ -20,6 +20,8 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.3.0/css/responsive.bootstrap5.min.css">
     <link rel="stylesheet" href="{{ asset('css/toastr.min.css') }}">
 
+     <!-- Favicon -->
+    <link href="{{ asset('images/logo.png') }}" rel="icon" type="image/png">
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 
