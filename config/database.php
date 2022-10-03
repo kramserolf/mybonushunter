@@ -45,12 +45,12 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'url' => 'mysql://bf3b26b9adcb49:d1688230@us-cdbr-east-06.cleardb.net/heroku_60b457650452083?reconnect=true',
-            'host' => 'us-cdbr-east-06.cleardb.net',
-            'port' => '3306',
-            'database' => 'heroku_60b457650452083',
-            'username' => 'bf3b26b9adcb49',
-            'password' => 'd1688230',
+            'url' => 'mysql://doadmin:AVNS_y6yGAHHRiDIvJuR9bYL@db-mysql-nyc1-74837-do-user-12270083-0.b.db.ondigitalocean.com:25060/defaultdb?ssl-mode=REQUIRED',
+            'host' => 'db-mysql-nyc1-74837-do-user-12270083-0.b.db.ondigitalocean.com',
+            'port' => '25060',
+            'database' => 'defaultdb',
+            'username' => 'doadmin',
+            'password' => 'AVNS_y6yGAHHRiDIvJuR9bYL ',
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
