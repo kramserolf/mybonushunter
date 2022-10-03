@@ -195,11 +195,12 @@
                 success: (response) => {
                     if(response){
                         this.reset();
+                        toastr.success('Link saved successfully','Success');
                         linkTable.draw();
                     }
                 },
                 error: function(response){
-                    $('#image-input-error').text(response.responseJSON.message);
+                    toastr.error(response['responseJSON']['message'],'Error has occured');
                 }
             });
         });
@@ -222,7 +223,7 @@
                     }
                 },
                 error: function(response){
-                    $('#image-input-error').text(response.responseJSON.message);
+                    toastr.error(response['responseJSON']['message'],'Error has occured');
                 }
             });
         });
@@ -239,10 +240,10 @@
                     },
                     success: function (data) {
                         linkTable.draw();
-                    // toastr.success('Expense deleted successfully','Success');
+                    toastr.success('Link deleted successfully','Success');
                     },
                     error: function (data) {
-                    // toastr.error(data['responseJSON']['message'],'Error has occured');
+                    toastr.error(data['responseJSON']['message'],'Error has occured');
                     }
                 });
             }

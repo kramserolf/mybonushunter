@@ -69,7 +69,20 @@
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             }
         });
-
+        // TOASTR OPTIONS
+        // toastr.options = {
+        //         "debug": false,
+        //         "newestOnTop": true,
+        //         "positionClass": "toast-top-right",
+        //         "preventDuplicates": true,
+        //         "showDuration": "300",
+        //         "hideDuration": "500",
+        //         "timeOut": "3000",
+        //         "showEasing": "swing",
+        //         "hideEasing": "linear",
+        //         "showMethod": "fadeIn",
+        //         "hideMethod": "fadeOut"
+        // }
         //load table
         let table = $('.data-table').DataTable({
             processing: true,
@@ -123,11 +136,12 @@
                 success: (response) => {
                     if(response){
                         this.reset();
+                        toastr.success('Banner saved successfully','Success');
                         table.draw();
                     }
                 },
                 error: function(response){
-                    $('#image-input-error').text(response.responseJSON.message);
+                    toastr.error(response['responseJSON']['message'],'Error has occured');
                 }
             });
         });
@@ -144,10 +158,10 @@
                     },
                     success: function (data) {
                     table.draw();
-                    // toastr.success('Expense deleted successfully','Success');
+                    toastr.success('Banner deleted successfully','Success');
                     },
                     error: function (data) {
-                    // toastr.error(data['responseJSON']['message'],'Error has occured');
+                    toastr.error(data['responseJSON']['message'],'Error has occured');
                     }
                 });
             }

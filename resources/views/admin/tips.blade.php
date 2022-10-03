@@ -108,6 +108,7 @@
                 success: (response) => {
                     if(response){
                         this.reset();
+                        toastr.success('Tip saved successfully','Success');
                         table.draw();
                     }
                 },

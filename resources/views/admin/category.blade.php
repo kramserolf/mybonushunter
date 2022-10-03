@@ -105,7 +105,7 @@
                     }
                 },
                 error: function(response){
-                    $('#image-input-error').text(response.responseJSON.message);
+                    toastr.error(response['responseJSON']['message'],'Error has occured');
                 }
             });
         });
@@ -121,11 +121,11 @@
                     id:id
                     },
                     success: function (data) {
-                    table.draw();
-                    // toastr.success('Expense deleted successfully','Success');
+                    table.draw();C
+                    toastr.success('Category deleted successfully','Success');
                     },
                     error: function (data) {
-                    // toastr.error(data['responseJSON']['message'],'Error has occured');
+                    toastr.error(data['responseJSON']['message'],'Error has occured');
                     }
                 });
             }

@@ -157,11 +157,12 @@
                 success: (response) => {
                     if(response){
                         this.reset();
+                        toastr.success('Offer saved successfully','Success');
                         table.draw();
                     }
                 },
                 error: function(response){
-                    $('#image-input-error').text(response.responseJSON.message);
+                    toastr.error(response['responseJSON']['message'],'Error has occured');
                 }
             });
         });
@@ -178,10 +179,10 @@
                     },
                     success: function (data) {
                     table.draw();
-                    // toastr.success('Expense deleted successfully','Success');
+                    toastr.success('Offer deleted successfully','Success');
                     },
                     error: function (data) {
-                    // toastr.error(data['responseJSON']['message'],'Error has occured');
+                    toastr.error(data['responseJSON']['message'],'Error has occured');
                     }
                 });
             }
