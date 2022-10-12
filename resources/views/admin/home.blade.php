@@ -13,17 +13,8 @@
                     <div class="col">
                         <div class="text-xs font-weight-bold text-secondary fw-bold mb-3">Registered Users</div>
                         <div class="h2 m-4 fw-bold">{{$new_users}}</div>
-                        
                     </div>
                 </div>
-                {{-- <div class="m-2">
-                    <span class="text-success fw-bold">
-                        <i class="bi-graph-up" style="font-size: 16px; margin-right: 6px"></i>
-                    </span>
-                    </span> <span  style="font-size: 12px;">
-                        Past 7 days
-                    </span>
-                </div> --}}
             </div>
         </div>
     </div>
